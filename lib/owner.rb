@@ -1,11 +1,14 @@
 class Owner
   
-  def initialize(pets)
+  attr_accessor :name, :pets
+  attr_reader :species
+
+  @@owners = []
+
+  def initialize(species, pets = {:fishes => [], :dogs => [], :cats => []})
+    @species = species
     @pets = pets
+    @@owners << self
   end
-  # will know about all its pets
-  # be able to buy a pet
-  # set the name of a pet that can not change
-  # change a pets mood through walking, feeding or playing with it
-  # sell all of its pets
+  
 end
