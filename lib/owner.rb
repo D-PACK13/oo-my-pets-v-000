@@ -2,6 +2,7 @@ class Owner
   
   def initialize(pets)
     @pets = pets
+  end
   # will know about all its pets
   # be able to buy a pet
   # set the name of a pet that can not change
