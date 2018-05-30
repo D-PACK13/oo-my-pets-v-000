@@ -27,21 +27,11 @@ class Owner
     @pets[:dogs] << Dog.new(dog_name)
   end
   
-  def walk_dogs(name)
-    @pets[:dogs] << Dog.new(dog_name)
-  end
-
-    describe "#walk_dogs" do
-      it "walks the dogs which makes the dogs' moods happy" do
-        dog = Dog.new("Daisy")
-        owner.pets[:dogs] << dog
-        owner.walk_dogs
-        expect(dog.mood).to eq("happy")
-      end
+  def walk_dogs
+    @pets[:dogs].each do |dog|
+      dog.mood = "happy"
     end
-
-
-
+  end
 
   def self.all
     @@owners
