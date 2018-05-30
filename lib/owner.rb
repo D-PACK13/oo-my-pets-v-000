@@ -27,8 +27,9 @@ class Owner
     @pets[:dogs] << Dog.new(dog_name)
   end
   
-  def walk_dogs
-
+  def walk_dogs(name)
+    @pets[:dogs] << Dog.new(dog_name)
+  end
 
     describe "#walk_dogs" do
       it "walks the dogs which makes the dogs' moods happy" do
