@@ -11,4 +11,5 @@ class Owner
     @@owners << self
   end
   
+  
 end
